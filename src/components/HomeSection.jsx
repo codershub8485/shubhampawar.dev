@@ -183,7 +183,16 @@ const HomeSection = () => {
             <motion.span
               className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 inline-block"
               whileHover={{ scale: 1.02 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              transition={{
+                type: "spring", 
+                stiffness: 400, 
+                damping: 10,
+                duration: 0.8, 
+                delay: 0.5,
+                ease: "easeOut"
+              }}
+              initial={{ rotateY: 90, opacity: 0 }}
+              animate={{ rotateY: 0, opacity: 1 }}
             >
               Shubham Pawar
             </motion.span>

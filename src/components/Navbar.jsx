@@ -154,9 +154,16 @@ const Navbar = () => {
             <div className="hidden sm:block">
               <motion.h1 
                 className="font-bold text-xl bg-gradient-to-r from-white via-cyan-100 to-blue-100 bg-clip-text text-transparent"
-                animate={{ 
-                  scale: scrolled ? 0.95 : 1,
-                  opacity: scrolled ? 0.9 : 1
+                initial={{ rotateY: 90, opacity: 0 }}
+                animate={{
+                  rotateY: 0, 
+                  opacity: scrolled ? 0.9 : 1,
+                  scale: scrolled ? 0.95 : 1
+                }}
+                transition={{ 
+                  duration: 0.6, 
+                  delay: 0.3,
+                  ease: "easeOut"
                 }}
               >
                 Shubham
