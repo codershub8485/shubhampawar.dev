@@ -36,7 +36,7 @@ const Footer = () => {
 
   const handleDownloadResume = () => {
     const link = document.createElement('a')
-    link.href = '/resume.pdf'
+    link.href = '/assets/Shubham_Pawar_Resume.pdf'
     link.download = 'Shubham_Pawar_Resume.pdf'
     document.body.appendChild(link)
     link.click()
@@ -100,11 +100,11 @@ const Footer = () => {
               </div>
               <div>
                 <h4 className="text-white font-bold text-lg">Shubham Pawar</h4>
-                <p className="text-sm text-white/60">Full-Stack Developer</p>
+                <p className="text-sm text-white/60">Full-Stack &amp; AI Engineer</p>
               </div>
             </div>
             <p className="text-white/60 text-sm">
-              Building digital experiences that combine innovation with functionality.
+              Shipping production GenAI, LLM, RAG &amp; MCP systems alongside enterprise SaaS.
             </p>
           </div>
 

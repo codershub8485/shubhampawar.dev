@@ -1,0 +1,246 @@
+%-------------------------
+% Resume in Latex - 2 PAGE ATS-OPTIMIZED VERSION
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Tightened margins to keep content to 2 pages
+\addtolength{\oddsidemargin}{-0.65in}
+\addtolength{\evensidemargin}{-0.55in}
+\addtolength{\textwidth}{1.27in}
+\addtolength{\topmargin}{-.8in}
+\addtolength{\textheight}{1.6in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \scshape Shubham Pawar} \\ \vspace{1pt}
+    Akurdi, Pune, Maharashtra 411033 \\ \vspace{1pt}
+    \small
+    \faPhone\ +91 8485829602 ~
+    \href{mailto:shubhampawar848582@gmail.com}
+    {\faEnvelope\ \underline{shubhampawar848582@gmail.com}} ~
+    \href{https://www.linkedin.com/in/shubham-pawar-001b9a22b}
+    {\faLinkedin\ \underline{linkedin.com/in/shubham-pawar-001b9a22b}} ~
+    \href{https://github.com/codershub8485}
+    {\faGithub\ \underline{github.com/codershub8485}} ~
+    \href{https://shubhampawar-dev.vercel.app/}
+    {\faGlobe\ \underline{Portfolio url}}
+\end{center}
+
+
+%-----------PROFESSIONAL SUMMARY-----------
+\section{Professional Summary}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    Results-driven \textbf{Full Stack Engineer} and \textbf{AI Engineer} with 2+ years building production \textbf{Generative AI}, \textbf{LLM}, \textbf{RAG}, and \textbf{MCP (Model Context Protocol)} systems alongside enterprise SaaS. Hands-on with \textbf{AI Agent orchestration}, \textbf{prompt engineering}, \textbf{vector embeddings}, and \textbf{multi-model integration} (Claude, GPT, Kimi, GLM) via \textbf{AWS Bedrock} and \textbf{OpenAI}. Proficient in \textbf{Python (FastAPI)}, \textbf{Java (Spring Boot)}, \textbf{React.js}, \textbf{Next.js}, \textbf{Docker}, and \textbf{AWS} (Bedrock, EC2, S3, Lambda). Proven delivery of \textbf{RESTful APIs}, \textbf{JWT/RBAC} security, \textbf{CI/CD}, and \textbf{microservices} for government, enterprise, and AI-native products with 100\% sprint success.
+  }}
+\end{itemize}
+\vspace{-10pt}
+
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    \textbf{AI / GenAI}{: LLM, Generative AI, RAG (Retrieval-Augmented Generation), MCP (Model Context Protocol), AI Agents, Agentic Workflows, Prompt Engineering, Prompt Caching, Vector Embeddings, Semantic Search, LiteLLM, LangChain Concepts, AI Model Integration (Claude, GPT, Kimi K2, GLM-5, Minimax), Text-to-Speech (TTS), AI Detection Models} \\
+
+    \textbf{Languages}{: Python, Java, JavaScript, TypeScript, PHP, SQL, Bash} \\
+
+    \textbf{Backend \& APIs}{: FastAPI, Spring Boot, Node.js, Express.js, Laravel, RESTful APIs, Microservices, JWT, OAuth 2.0, RBAC} \\
+
+    \textbf{Frontend}{: React.js, Next.js, HTML5, CSS3, AJAX, Tailwind CSS, Real-Time Dashboards} \\
+
+    \textbf{Cloud \& DevOps}{: AWS (Bedrock, EC2, S3, Lambda, IAM), Docker, Docker Buildx, Docker Compose, GCP, CI/CD, Linux, Shell Scripting} \\
+
+    \textbf{Databases \& Security}{: MySQL, PostgreSQL, Vector DB concepts, ACID Transactions, Indexing, XSS / CSRF Protection, Secure Token Handling} \\
+
+    \textbf{Tools \& Methods}{: Git, GitHub, GitLab, Playwright, pytest, Postman, AST, Agile / Scrum, System Design, TDD, Performance Optimization}
+  }}
+\end{itemize}
+\vspace{-16pt}
+
+
+
+%-----------EXPERIENCE-----------
+\section{Work Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+  {\textbf{Ethara AI}}{\textit{Mar 2026 -- Present}}
+  {\textbf{Full Stack Engineer}}{\textit{Gurugram, India}}
+  \resumeItemListStart
+    \resumeItem{Pioneering production \textbf{AI/LLM platforms} and \textbf{agentic coding pipelines} that orchestrate \textbf{Generative AI} models for automated software engineering at scale.}
+    \resumeItem{Architecting \textbf{multi-model LLM integrations} on \textbf{AWS Bedrock} (\textbf{Claude Opus 4.6}, \textbf{Kimi K2}, \textbf{GLM-5}, \textbf{Minimax}) and \textbf{OpenAI GPT} via \textbf{LiteLLM}, with \textbf{prompt caching}, \textbf{cost optimization}, and real-time API health probing.}
+    \resumeItem{Shipping \textbf{RESTful microservices} in \textbf{Python FastAPI} and \textbf{React.js / Next.js} dashboards for \textbf{AI Agent} orchestration, evaluation, and observability.}
+    \resumeItem{Implementing \textbf{RAG} workflows and \textbf{MCP (Model Context Protocol)} integrations to inject specification docs, source code, and unit-test context into LLM agents.}
+    \resumeItem{Driving \textbf{Docker} containerization (\textbf{Docker Buildx}, OCI export, \textbf{ThreadPoolExecutor} parallel builds, arm64/amd64 auto-detection), \textbf{CI/CD}, \textbf{AWS} deployment, and \textbf{JWT/RBAC} security for high-throughput AI workloads.}
+  \resumeItemListEnd
+
+\resumeSubheading
+  {\textbf{Austere Systems Limited}}{\textit{Jan 2024 -- Feb 2026}}
+  {\textbf{Software Developer}}{\textit{Pune, Maharashtra}}
+  \resumeItemListStart
+    \resumeItem{Progressed \textbf{Intern → Trainee → Software Developer}; released \textbf{ERP}, \textbf{FDMS}, \textbf{Audit Management SaaS}, and \textbf{Voice Broadcast} platforms.}
+    \resumeItem{Designed \textbf{scalable RESTful APIs} using \textbf{Java Spring Boot} and \textbf{Python FastAPI} with \textbf{JWT} + \textbf{Spring Security} \textbf{RBAC} across multi-level user hierarchies, powering complex workflows and real-time data processing.}
+    \resumeItem{Orchestrated \textbf{workflow-driven systems} for \textbf{fund tracking}, \textbf{audit lifecycle management}, \textbf{QC approvals}, and \textbf{automated decision flows}.}
+    \resumeItem{Developed responsive \textbf{React.js / Next.js} frontends with \textbf{real-time dashboards}, \textbf{SLA indicators}, and \textbf{status monitoring}; integrated \textbf{AI Text-to-Speech (TTS)} and \textbf{detection models} for voice campaign automation.}
+    \resumeItem{Optimized \textbf{SQL queries}, indexing, and transactions for \textbf{40\%+ performance improvement}; led a \textbf{team of 12+ developers} to a \textbf{100\% sprint success rate}; deployed on \textbf{AWS} and \textbf{GCP} with Git-based workflows.}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-10pt}
+
+
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+\vspace{-5pt}
+\resumeSubHeadingListStart
+
+  \resumeProjectHeading
+  {\textbf{Kaiju -- AI Coding Pipeline \& LLM Agent Orchestrator} $|$ \emph{\textbf{Python}, \textbf{Docker}, \textbf{AWS Bedrock}, \textbf{LLM}, \textbf{RAG}, \textbf{MCP}}}{\textit{Mar 2026 -- Present}}
+  \resumeItemListStart
+    \resumeItem{Spearheaded \textbf{Kaiju}, a production \textbf{AI coding pipeline} orchestrating \textbf{LLM agents} through a \textbf{3-stage workflow} (\textbf{Draft → Lint Refine → Test Refine}) to autonomously implement Python libraries from AST-stubbed code, achieving \textbf{80\%+ pass rates} on benchmark repositories.}
+    \resumeItem{Devised \textbf{multi-LLM integration} on \textbf{AWS Bedrock} (\textbf{Claude Opus 4.6}, \textbf{Kimi K2.5}, \textbf{GLM-5}, \textbf{Minimax M2.5}) and \textbf{OpenAI GPT-5} via \textbf{LiteLLM} with \textbf{prompt caching} and \textbf{token cost analytics}.}
+    \resumeItem{Crafted a \textbf{RAG (Retrieval-Augmented Generation)} layer scraping specification PDFs via \textbf{Playwright} (headless Chromium) and \textbf{MCP (Model Context Protocol)}-style context injection -- piping source files, unit-test names, ruff lint diagnostics, and pytest traces into agents stage-by-stage.}
+    \resumeItem{Authored an \textbf{AST-based Python code stubber} preserving imports, decorators, and import-time function calls; assembled an \textbf{automated batch orchestrator} ingesting a CSV to run fork, clone, stub, push, dataset creation, Docker build, and pytest test-ID generation end-to-end.}
+    \resumeItem{Productionized isolated \textbf{Docker} execution via \textbf{Docker Buildx} (OCI tarball + native load), parallelized with \textbf{ThreadPoolExecutor}, with \textbf{arm64 / amd64} auto-detection, inactivity watchdog, model API health-probe, and per-stage evaluation metrics (pass rate, cost, latency).}
+    \resumeItem{Composed production \textbf{Python tooling} (\textit{discover.py}, \textit{validate.py}, \textit{prepare\_repo.py}, \textit{stub.py}, \textit{create\_dataset.py}, \textit{generate\_test\_ids.py}, \textit{batch\_prepare.py}) and secure \textbf{AWS} / \textbf{Bedrock} credential flows for end-to-end reproducibility.}
+  \resumeItemListEnd
+  \vspace{-13pt}
+
+  \resumeProjectHeading
+  {\textbf{Enterprise SaaS Audit Management Platform} $|$ \emph{\textbf{Frontend Developer} $|$ \textbf{React.js}, \textbf{Web Security}}}{\textit{Aug 2025 -- Feb 2026}}
+  \resumeItemListStart
+    \resumeItem{Delivered a \textbf{scalable enterprise SaaS audit management platform} supporting \textbf{multiple audit types} with complex, role-driven workflows.}
+    \resumeItem{Enforced \textbf{role-based UI rendering} for \textbf{7 user roles} with \textbf{strict access control}, \textbf{secure authentication flows}, and \textbf{session-safe routing}.}
+    \resumeItem{Created \textbf{real-time dashboards} with \textbf{SLA timers}, \textbf{audit status tracking}, and \textbf{offline sync indicators}; applied \textbf{XSS prevention}, \textbf{CSRF-safe interactions}, and \textbf{secure token handling}.}
+  \resumeItemListEnd
+  \vspace{-13pt}
+
+  \resumeProjectHeading
+  {\textbf{Voice Broadcast Management System} $|$ \emph{\textbf{Full Stack Developer} $|$ \textbf{FastAPI}, \textbf{Next.js}, \textbf{AI/TTS}}}{\textit{July 2024 -- July 2025}}
+  \resumeItemListStart
+    \resumeItem{Launched a \textbf{Voice Broadcast Management System} enabling users to \textbf{configure and launch voice campaigns} through a single streamlined workflow.}
+    \resumeItem{Integrated \textbf{AI-powered Text-to-Speech (TTS)} and \textbf{intelligent detection models} to automate campaign execution and improve \textbf{delivery accuracy}.}
+    \resumeItem{Modeled \textbf{scalable backend} in \textbf{Python FastAPI} and \textbf{high-performance frontend} in \textbf{Next.js}, with \textbf{live campaign monitoring}, \textbf{analytics dashboards}, and \textbf{secure API communication}.}
+  \resumeItemListEnd
+  \vspace{-13pt}
+
+  \resumeProjectHeading
+  {\textbf{FDMS for Haryana Government} $|$ \emph{\textbf{Backend Developer} $|$ \textbf{Java}, \textbf{Spring Boot}}}{\textit{Jan 2024 -- June 2024}}
+  \resumeItemListStart
+    \resumeItem{Built a \textbf{Fund Disbursement Management System (FDMS)} for the \textbf{Haryana Government} to digitally manage \textbf{fund transfers} across multiple administrative levels.}
+    \resumeItem{Structured secure \textbf{RESTful APIs} in \textbf{Java Spring Boot} for \textbf{fund allocation}, \textbf{approval workflows}, and \textbf{transaction processing} with \textbf{Spring Security} + \textbf{JWT} role-based authorization (Admin, Officers, Employees).}
+    \resumeItem{Enhanced \textbf{database queries}, ensured \textbf{ACID-compliant transactions}, and maintained \textbf{data integrity} with robust validations and exception handling.}
+  \resumeItemListEnd
+  \vspace{-13pt}
+
+\resumeSubHeadingListEnd
+\vspace{-0pt}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Savitribai Phule Pune University}{Aug. 2019  -- Aug. 2023}
+    {Bachelor of Engineering in Computer Science \textbf{(CGPA: 8.81)}}{Pune, Maharashtra}
+\resumeSubHeadingListEnd
+
+
+%-----------LEADERSHIP---------------
+\section{Leadership / Extracurricular}
+    \resumeSubHeadingListStart
+        \resumeSubheading{Team Lead -- Product Development}{2024 -- 2026}{Austere Systems Limited}{Pune, Maharashtra}
+            \resumeItemListStart
+                \resumeItem{Led a team of 12--15 members to develop and deliver a scalable ERP product with high quality standards and on-time delivery.}
+            \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+\end{document}

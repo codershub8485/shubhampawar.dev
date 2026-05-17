@@ -24,15 +24,15 @@ const ContactSection = () => {
     {
       icon: Phone,
       label: "Phone",
-      value: "+91 8485829838",
-      href: "tel:+918485829838",
+      value: "+91 8485829602",
+      href: "tel:+918485829602",
       color: "from-purple-500 to-pink-500"
     },
     {
       icon: MapPin,
       label: "Location",
-      value: "Pune, India",
-      href: "#",
+      value: "Akurdi, Pune 411033",
+      href: "https://maps.google.com/?q=Akurdi+Pune",
       color: "from-emerald-500 to-green-500"
     },
   ]
@@ -111,7 +111,7 @@ const ContactSection = () => {
           </h2>
           
           <p className="text-lg text-white/60 max-w-2xl mx-auto">
-            Have a project in mind? Let's discuss how we can work together to bring your ideas to life.
+            Got an AI agent, RAG pipeline, or full-stack platform to ship? Let's scope it together — response within 24 hours.
           </p>
         </motion.div>
 

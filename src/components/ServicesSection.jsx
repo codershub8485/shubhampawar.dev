@@ -1,55 +1,64 @@
 import { motion } from "framer-motion"
-import { Code2, Palette, SearchCheck, MonitorSmartphone, Database, Zap, Sparkles, Cpu, Globe, Cloud, Layers, Server, Briefcase, CheckCircle } from "lucide-react"
+import {
+  Code2, Database, Zap, Sparkles, Cpu, Globe, Cloud, Layers, Server,
+  Brain, Bot, Workflow, ShieldCheck, Container
+} from "lucide-react"
 
 const ServicesSection = () => {
   const services = [
     {
-      service: "Frontend Development",
-      description: "Building modern, responsive UI using React, Next.js, and TailwindCSS with smooth animations and optimal performance.",
-      icon: Code2,
-      color: "from-blue-500 to-cyan-500",
-      gradient: "bg-gradient-to-br from-blue-500/20 via-cyan-500/10 to-transparent",
-      tech: ["React", "Next.js", "TypeScript", "Tailwind"]
-    },
-    {
-      service: "UI/UX Design",
-      description: "Creating intuitive interfaces with focus on usability, accessibility, and seamless user experience across all devices.",
-      icon: Palette,
+      service: "GenAI & LLM Engineering",
+      description:
+        "Production-ready LLM systems: multi-model orchestration via LiteLLM, prompt caching, cost analytics, and observability on AWS Bedrock and OpenAI.",
+      icon: Brain,
       color: "from-purple-500 to-pink-500",
       gradient: "bg-gradient-to-br from-purple-500/20 via-pink-500/10 to-transparent",
-      tech: ["Figma", "Adobe XD", "Prototyping", "User Research"]
+      tech: ["Claude Opus", "GPT-5", "Kimi K2", "GLM-5", "LiteLLM", "Prompt Caching"]
     },
     {
-      service: "Backend Development",
-      description: "Building secure, scalable systems with Node.js or Java Spring Boot, including REST APIs and database architecture.",
-      icon: Database,
-      color: "from-emerald-500 to-green-500",
-      gradient: "bg-gradient-to-br from-emerald-500/20 via-green-500/10 to-transparent",
-      tech: ["Node.js", "Spring Boot", "PostgreSQL", "MongoDB"]
-    },
-    {
-      service: "Full-Stack Solutions",
-      description: "End-to-end development of web applications with modern architecture patterns and best practices.",
-      icon: Layers,
+      service: "RAG & MCP Pipelines",
+      description:
+        "Retrieval-Augmented Generation pipelines + Model Context Protocol integrations to ground LLMs in your docs, source code, and live data sources.",
+      icon: Workflow,
       color: "from-cyan-500 to-blue-500",
       gradient: "bg-gradient-to-br from-cyan-500/20 via-blue-500/10 to-transparent",
-      tech: ["Microservices", "REST APIs", "Authentication", "Deployment"]
+      tech: ["RAG", "MCP", "Vector DB", "Embeddings", "Playwright", "Semantic Search"]
     },
     {
-      service: "Performance Optimization",
-      description: "Optimizing website speed, core web vitals, and overall performance for better user experience and SEO rankings.",
-      icon: Zap,
-      color: "from-amber-500 to-orange-500",
-      gradient: "bg-gradient-to-br from-amber-500/20 via-orange-500/10 to-transparent",
-      tech: ["Core Web Vitals", "Lighthouse", "Caching", "CDN"]
-    },
-    {
-      service: "Cloud & DevOps",
-      description: "Deploying and maintaining applications on cloud platforms with CI/CD pipelines and infrastructure as code.",
-      icon: Cloud,
+      service: "AI Agent Orchestration",
+      description:
+        "Agentic workflows that plan, execute and self-correct. From coding pipelines (Draft → Lint → Test) to evaluation harnesses and ops dashboards.",
+      icon: Bot,
       color: "from-indigo-500 to-purple-500",
       gradient: "bg-gradient-to-br from-indigo-500/20 via-purple-500/10 to-transparent",
-      tech: ["AWS", "Docker", "CI/CD", "Monitoring"]
+      tech: ["Agentic Workflows", "Tool Use", "Evaluation", "Observability"]
+    },
+    {
+      service: "Full-Stack Web Apps",
+      description:
+        "End-to-end product builds with React/Next.js + FastAPI/Spring Boot. Real-time dashboards, JWT/RBAC security and clean architecture.",
+      icon: Layers,
+      color: "from-emerald-500 to-green-500",
+      gradient: "bg-gradient-to-br from-emerald-500/20 via-green-500/10 to-transparent",
+      tech: ["Next.js", "React", "FastAPI", "Spring Boot", "TypeScript", "Tailwind"]
+    },
+    {
+      service: "Scalable Backend & APIs",
+      description:
+        "REST microservices, secure auth (JWT, OAuth 2.0, RBAC), workflow engines and database design with ACID guarantees and performance tuning.",
+      icon: Server,
+      color: "from-amber-500 to-orange-500",
+      gradient: "bg-gradient-to-br from-amber-500/20 via-orange-500/10 to-transparent",
+      tech: ["FastAPI", "Spring Boot", "PostgreSQL", "MySQL", "Microservices", "RBAC"]
+    },
+    {
+      service: "Cloud, Docker & DevOps",
+      description:
+        "AWS Bedrock / EC2 / S3 / Lambda deployments, Docker Buildx multi-arch builds, CI/CD pipelines, monitoring and per-stage evaluation metrics.",
+      icon: Container,
+      color: "from-blue-500 to-cyan-500",
+      gradient: "bg-gradient-to-br from-blue-500/20 via-cyan-500/10 to-transparent",
+      tech: ["AWS", "Docker Buildx", "CI/CD", "ThreadPoolExecutor", "Linux"]
     },
   ]
 
@@ -58,7 +67,7 @@ const ServicesSection = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-black">
         <div className="absolute top-1/4 left-10 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-1/4 right-10 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
-        
+
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
             backgroundImage: `radial-gradient(circle at 25px 25px, rgba(100, 200, 255, 0.1) 2px, transparent 0)`,
@@ -76,22 +85,22 @@ const ServicesSection = () => {
         >
           <div className="inline-flex items-center gap-3 mb-6">
             <div className="w-12 h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent"></div>
-            <span className="text-blue-400 text-sm font-medium tracking-widest">WHAT I OFFER</span>
+            <span className="text-blue-400 text-sm font-medium tracking-widest">WHAT I BUILD</span>
             <div className="w-12 h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent"></div>
           </div>
-          
+
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/80">
-              Expert
+              AI &amp; Full-Stack
             </span>
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400">
               Services
             </span>
           </h2>
-          
+
           <p className="text-lg text-white/60 max-w-2xl mx-auto">
-            End-to-end digital solutions tailored to your business needs, delivered with cutting-edge technology
+            From AI Agent pipelines and RAG systems to scalable SaaS platforms — production-ready, end-to-end.
           </p>
         </motion.div>
 
@@ -103,41 +112,41 @@ const ServicesSection = () => {
                 key={item.service}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: idx * 0.1 }}
+                transition={{ duration: 0.6, delay: idx * 0.08 }}
                 whileHover={{ y: -10 }}
                 className="group relative"
               >
                 <div className={`absolute -inset-0.5 bg-gradient-to-br ${item.color} rounded-3xl blur opacity-0 group-hover:opacity-30 transition-opacity duration-500`}></div>
-                
+
                 <div className="relative backdrop-blur-xl border border-white/10 bg-white/5 rounded-2xl p-8 h-full flex flex-col transition-all duration-300 group-hover:bg-white/10 group-hover:border-white/20 overflow-hidden">
                   <div className={`absolute inset-0 ${item.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
-                  
-                  <div className="relative z-10 mb-8">
-                    <div className="relative">
+
+                  <div className="relative z-10 mb-6">
+                    <div className="relative inline-block">
                       <div className={`absolute -inset-4 bg-gradient-to-br ${item.color} rounded-full blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500`}></div>
-                      <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${item.color} flex items-center justify-center relative z-10 group-hover:scale-110 transition-transform duration-300`}>
-                        <Icon className="w-10 h-10 text-white" />
+                      <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${item.color} flex items-center justify-center relative z-10 group-hover:scale-110 transition-transform duration-300`}>
+                        <Icon className="w-8 h-8 text-white" />
                       </div>
                     </div>
                   </div>
 
                   <div className="relative z-10 flex-1">
-                    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-blue-400 transition-all duration-300">
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-blue-400 transition-all duration-300">
                       {item.service}
                     </h3>
-                    
-                    <p className="text-white/70 leading-relaxed mb-6">
+
+                    <p className="text-white/70 leading-relaxed mb-5 text-sm">
                       {item.description}
                     </p>
 
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-1.5">
                       {item.tech.map((tech, techIndex) => (
                         <motion.span
                           key={tech}
                           initial={{ opacity: 0, scale: 0.8 }}
                           whileInView={{ opacity: 1, scale: 1 }}
-                          transition={{ duration: 0.3, delay: techIndex * 0.05 + idx * 0.1 }}
-                          className="px-3 py-1.5 backdrop-blur-sm border border-white/5 bg-white/5 text-white/70 rounded-lg text-xs font-medium"
+                          transition={{ duration: 0.3, delay: techIndex * 0.04 + idx * 0.08 }}
+                          className="px-2.5 py-1 backdrop-blur-sm border border-white/5 bg-white/5 text-white/70 rounded-lg text-[11px] font-medium"
                         >
                           {tech}
                         </motion.span>
@@ -145,17 +154,17 @@ const ServicesSection = () => {
                     </div>
                   </div>
 
-                  <div className="relative z-10 mt-8 pt-6 border-t border-white/10">
+                  <div className="relative z-10 mt-6 pt-5 border-t border-white/10">
                     <div className="flex items-center justify-between">
-                      <span className="text-sm text-white/50 group-hover:text-white/70 transition-colors">
-                        Learn More
+                      <span className="text-xs text-white/50 group-hover:text-white/70 transition-colors">
+                        Production-grade delivery
                       </span>
                       <motion.div
                         animate={{ x: [0, 5, 0] }}
                         transition={{ repeat: Infinity, repeatType: "reverse", duration: 2 }}
                         className="text-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity"
                       >
-                        <Sparkles className="w-5 h-5" />
+                        <Sparkles className="w-4 h-4" />
                       </motion.div>
                     </div>
                   </div>
@@ -178,15 +187,15 @@ const ServicesSection = () => {
               <div className="md:col-span-2">
                 <h3 className="text-2xl font-bold text-white mb-4">
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
-                    My Development Process
+                    My Engineering Process
                   </span>
                 </h3>
                 <p className="text-white/60">
-                  Following agile methodologies, I ensure every project is delivered with precision, 
-                  maintaining clear communication and transparency throughout the development lifecycle.
+                  Agile, transparent, and metrics-driven. Every project ships with evaluation, observability,
+                  and clear cost/perf reporting — from the first prototype to production rollout.
                 </p>
               </div>
-              
+
               <div className="flex items-center justify-center">
                 <motion.a
                   href="#contact"
@@ -203,10 +212,10 @@ const ServicesSection = () => {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
               {[
-                { step: "01", title: "Discovery", desc: "Requirement analysis" },
-                { step: "02", title: "Planning", desc: "Architecture design" },
-                { step: "03", title: "Development", desc: "Agile implementation" },
-                { step: "04", title: "Delivery", desc: "Testing & deployment" }
+                { step: "01", title: "Discovery", desc: "Goals, constraints & success metrics" },
+                { step: "02", title: "Architect", desc: "System design + model selection" },
+                { step: "03", title: "Build", desc: "Iterative dev with evaluation harness" },
+                { step: "04", title: "Ship", desc: "Deploy, monitor, optimize cost/latency" }
               ].map((process, index) => (
                 <motion.div
                   key={process.step}
@@ -234,25 +243,25 @@ const ServicesSection = () => {
           className="mt-20 text-center"
         >
           <h3 className="text-2xl md:text-3xl font-bold text-white mb-12">
-            Why Choose My Services?
+            Why Hire Me for AI &amp; Full-Stack Work?
           </h3>
-          
+
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {[
               {
+                icon: <Brain className="w-6 h-6" />,
+                title: "AI-Native Mindset",
+                desc: "Production LLM, RAG, MCP — not just demos"
+              },
+              {
                 icon: <Zap className="w-6 h-6" />,
-                title: "Fast Delivery",
-                desc: "Efficient development process without compromising quality"
+                title: "Performance-First",
+                desc: "Track record of 40%+ optimisation wins"
               },
               {
-                icon: <Cpu className="w-6 h-6" />,
-                title: "Modern Tech",
-                desc: "Using latest technologies and best practices"
-              },
-              {
-                icon: <Globe className="w-6 h-6" />,
-                title: "Scalable Solutions",
-                desc: "Built to grow with your business needs"
+                icon: <ShieldCheck className="w-6 h-6" />,
+                title: "Security by Default",
+                desc: "JWT, RBAC, XSS/CSRF hardening from day one"
               }
             ].map((item, index) => (
               <motion.div

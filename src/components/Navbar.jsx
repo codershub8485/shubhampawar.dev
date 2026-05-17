@@ -95,8 +95,8 @@ const Navbar = () => {
 
   const handleDownloadResume = () => {
     const link = document.createElement('a')
-    link.href = '/assets/Shubham_Pawar2.pdf'
-    link.download = 'Shubham_Pawar2.pdf'
+    link.href = '/assets/Shubham_Pawar_Resume.pdf'
+    link.download = 'Shubham_Pawar_Resume.pdf'
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
@@ -168,7 +168,7 @@ const Navbar = () => {
               >
                 Shubham
               </motion.h1>
-              <p className="text-xs text-white/40 tracking-wider">FULL-STACK DEVELOPER</p>
+              <p className="text-xs text-white/40 tracking-wider">FULL-STACK &amp; AI ENGINEER</p>
             </div>
           </motion.div>
 
@@ -337,7 +337,7 @@ const Navbar = () => {
                     </div>
                     <div>
                       <h2 className="font-bold text-lg text-white">Shubham</h2>
-                      <p className="text-xs text-white/40">Full-Stack Developer</p>
+                      <p className="text-xs text-white/40">Full-Stack &amp; AI Engineer</p>
                     </div>
                   </motion.div>
                 </div>
