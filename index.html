@@ -1,14 +1,76 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/x-icon" href="/assets/laptop.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shubham Pawar | Full-Stack Developer</title>
-    <meta name="description" content="Portfolio of Shubham Pawar, a passionate Full-Stack Developer specializing in modern web applications." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Shubham Pawar | AI Engineer & Full Stack Engineer</title>
+    <meta
+      name="description"
+      content="Shubham Pawar is an AI Engineer and Full Stack Engineer in Gurugram, India, with 3+ years delivering production platforms, AI training and evaluation infrastructure, RL environments and LLM agent pipelines in Python, FastAPI, Java, React and AWS."
+    />
+    <meta name="author" content="Shubham Pawar" />
+    <meta name="theme-color" content="#0A0A0F" />
+    <link rel="canonical" href="https://shubhampawar-dev.vercel.app/" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate icon" type="image/png" href="/assets/laptop.png" />
+    <link rel="apple-touch-icon" href="/assets/laptop.png" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://shubhampawar-dev.vercel.app/" />
+    <meta property="og:title" content="Shubham Pawar | AI Engineer & Full Stack Engineer" />
+    <meta
+      property="og:description"
+      content="AI training platforms, RL environments and LLM agent pipelines, built end to end. 3+ years in Python, FastAPI, Java, React and AWS."
+    />
+    <meta property="og:image" content="https://shubhampawar-dev.vercel.app/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Shubham Pawar | AI Engineer & Full Stack Engineer" />
+    <meta
+      name="twitter:description"
+      content="AI training platforms, RL environments and LLM agent pipelines, built end to end."
+    />
+    <meta name="twitter:image" content="https://shubhampawar-dev.vercel.app/og-image.png" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Shubham Pawar",
+        "jobTitle": "AI Engineer | Full Stack Engineer",
+        "url": "https://shubhampawar-dev.vercel.app/",
+        "email": "mailto:shubhampawar848582@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Gurugram",
+          "addressRegion": "Haryana",
+          "addressCountry": "IN"
+        },
+        "alumniOf": { "@type": "CollegeOrUniversity", "name": "Savitribai Phule Pune University" },
+        "worksFor": { "@type": "Organization", "name": "Ethara AI" },
+        "sameAs": [
+          "https://github.com/codershub8485",
+          "https://www.linkedin.com/in/shubham-pawar-001b9a22b"
+        ],
+        "knowsAbout": ["Large Language Models", "AI Agents", "Reinforcement Learning Environments", "RLHF", "SFT", "Python", "FastAPI", "Java", "Spring Boot", "React", "Next.js", "AWS Bedrock", "Docker"]
+      }
+    </script>
+    <script>
+      // Apply the saved theme before first paint to avoid a flash.
+      try {
+        var t = localStorage.getItem('sp-theme');
+        if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+      } catch (e) {}
+    </script>
   </head>
   <body>
+    <noscript>
+      <p style="padding:2rem;font-family:sans-serif">
+        Shubham Pawar, AI Engineer &amp; Full Stack Engineer. Email: shubhampawar848582@gmail.com
+      </p>
+    </noscript>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

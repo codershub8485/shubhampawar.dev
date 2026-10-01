@@ -1,0 +1,263 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------- Design tokens (RGB triplets so Tailwind can apply alpha) ---------- */
+:root,
+:root[data-theme='dark'] {
+  --bg: 10 10 15; /* #0A0A0F */
+  --surface: 20 20 28;
+  --fg: 236 236 241;
+  --muted: 150 150 168;
+  --line: 255 255 255;
+  --line-alpha: 0.08;
+  --accent-a: 139 92 246; /* violet */
+  --accent-b: 34 211 238; /* cyan */
+  --ok: 34 197 94;
+  --grain-opacity: 0.06;
+  color-scheme: dark;
+}
+
+:root[data-theme='light'] {
+  --bg: 248 248 250;
+  --surface: 255 255 255;
+  --fg: 17 17 24;
+  --muted: 88 88 104;
+  --line: 17 17 24;
+  --line-alpha: 0.1;
+  --accent-a: 109 40 217;
+  --accent-b: 8 145 178;
+  --ok: 22 163 74;
+  --grain-opacity: 0.035;
+  color-scheme: light;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+  body {
+    @apply bg-bg font-sans text-fg;
+    overflow-x: hidden;
+  }
+  ::selection {
+    background: rgb(var(--accent-a) / 0.35);
+    color: rgb(var(--fg));
+  }
+  :focus-visible {
+    outline: 2px solid rgb(var(--accent-b));
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    html.has-custom-cursor,
+    html.has-custom-cursor a,
+    html.has-custom-cursor button {
+      cursor: none;
+    }
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-[1440px] px-4 sm:px-8 lg:px-12;
+  }
+  .hairline {
+    border-color: rgb(var(--line) / var(--line-alpha));
+  }
+  .glass {
+    background: rgb(var(--surface) / 0.55);
+    backdrop-filter: blur(16px) saturate(140%);
+    -webkit-backdrop-filter: blur(16px) saturate(140%);
+    border: 1px solid rgb(var(--line) / var(--line-alpha));
+  }
+  .text-gradient {
+    background-image: linear-gradient(90deg, rgb(var(--accent-a)), rgb(var(--accent-b)));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .bg-accent {
+    background-image: linear-gradient(90deg, rgb(var(--accent-a)), rgb(var(--accent-b)));
+  }
+  .chip {
+    @apply inline-flex items-center rounded-full border px-3 py-1 font-mono text-[11px] uppercase tracking-wider text-muted;
+    border-color: rgb(var(--line) / var(--line-alpha));
+  }
+  .eyebrow {
+    @apply font-mono text-xs uppercase tracking-[0.2em] text-muted;
+  }
+}
+
+/* ---------- Grain overlay ---------- */
+.grain {
+  pointer-events: none;
+  position: fixed;
+  inset: -50%;
+  z-index: 60;
+  opacity: var(--grain-opacity);
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+
+/* ---------- Spotlight card border ---------- */
+.spotlight {
+  --mx: 50%;
+  --my: 50%;
+  position: relative;
+  isolation: isolate;
+}
+.spotlight::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: radial-gradient(
+    420px circle at var(--mx) var(--my),
+    rgb(var(--accent-b) / 0.7),
+    rgb(var(--accent-a) / 0.35) 30%,
+    transparent 60%
+  );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  z-index: -1;
+}
+.spotlight::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    360px circle at var(--mx) var(--my),
+    rgb(var(--accent-a) / 0.1),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  z-index: -1;
+  pointer-events: none;
+}
+.spotlight:hover::before,
+.spotlight:hover::after {
+  opacity: 1;
+}
+
+/* ---------- Contact headline gradient fill on hover ---------- */
+.fill-hover {
+  background-image: linear-gradient(90deg, rgb(var(--accent-a)), rgb(var(--accent-b)));
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: rgb(var(--fg));
+  transition:
+    background-size 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    -webkit-text-fill-color 0.6s;
+}
+.fill-hover:hover {
+  background-size: 100% 100%;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ---------- Link underline ---------- */
+.link-underline {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1px;
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.link-underline:hover,
+.link-underline:focus-visible {
+  background-size: 100% 1px;
+  background-position: 0% 100%;
+}
+
+/* ---------- Liquid fill button ---------- */
+.btn-fill {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border: 1px solid rgb(var(--line) / 0.18);
+  color: rgb(var(--fg));
+  transition: color 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.btn-fill::before {
+  content: '';
+  position: absolute;
+  left: -10%;
+  right: -10%;
+  top: 100%;
+  height: 220%;
+  z-index: -1;
+  border-radius: 45%;
+  background: rgb(var(--fg));
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.btn-fill:hover,
+.btn-fill:focus-visible {
+  color: rgb(var(--bg));
+}
+.btn-fill:hover::before,
+.btn-fill:focus-visible::before {
+  transform: translateY(-75%);
+}
+
+/* ---------- Rotating gradient border ---------- */
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+.conic-border {
+  background: conic-gradient(
+    from var(--angle),
+    rgb(var(--accent-a)),
+    rgb(var(--accent-b)),
+    transparent 40%,
+    transparent 60%,
+    rgb(var(--accent-a))
+  );
+  animation: spin-angle 5s linear infinite;
+}
+.conic-border > * {
+  background: rgb(var(--bg));
+}
+@keyframes spin-angle {
+  to {
+    --angle: 360deg;
+  }
+}
+
+/* ---------- Marquee pause ---------- */
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.2s !important;
+    scroll-behavior: auto !important;
+  }
+}
